@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+# usage of the script (sh homerpeakcall.sh tag_dir_loc1 tag_dir_loc2)
+# HOMER
+# output will be generated in the location where it is run
+# run sh homer_peak1.sh /scratch/GT/vdas/serena_b/ChIPSeq/FASTQ_2015/Sample_S_7_15DTAMO_S11395_tag /scratch/GT/vdas/serena_b/ChIPSeq/FASTQ_2015/Sample_S_2_10DCT_INPUT_S11390_tag
+# created by Vivek Das
+##Commands
+
+
+tag1=$1
+tag2=$2
+### HOMER
+#cd /scratch/GT/vdas/serena_b/ChIPSeq/FASTQ_2015/
+peaks=/scratch/GT/softwares/HOMER/.//bin/findPeaks
+
+echo "Running the peak calling with HOMER..."
+$peaks $tag1 -style histone -o auto -i $tag2
+echo "Finished peak calling..."
+cd $tag1
+ls -ltr
+echo "Moved to the tag directory where peak out is generated..."
+echo "Converting text to bed format..."
+perl2bed=/scratch/GT/softwares/HOMER/.//bin/pos2bed.pl; $perl2bed peaks.txt > peaks.bed
+echo "Removing the headers from the bed file..."
+more peaks.bed | grep -v "#" > peaks_clean.bed
+echo "HOMER peaks generated and corresponding bed file is created..."
+echo "done"
