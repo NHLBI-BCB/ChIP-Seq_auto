@@ -15,6 +15,6 @@ Script to run as per the requirements
 
 `sh homer_peak_call_histone.sh tag_dir_loc1 tag_dir_loc2`
 
-`sh multipeak_call_TF.sh sample_name fastq_location1 fastq_location2 output_folder`
+`sh multipeak_call_TF.sh sample_name bam_location1 bam_location2 output_folder`
 
-`sh multipeak_call_histone.sh sample_name fastq_location1 fastq_location2 output_folder`
+`sh multipeak_call_histone.sh sample_name bam_location1 bam_location2 output_folder`
