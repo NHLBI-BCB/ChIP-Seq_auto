@@ -30,7 +30,7 @@ macs14 -t $sinloc1/*.sorted.bam  -c $sinloc2/*.sorted.bam -n {$s}_macs14_out --f
 echo "Finishing MACS 1.4 on the bam files..."
 
 echo "Runnnig MACS2 on the bam files for peak calling..."
-macs2 callpeak -t $sinloc1/*.sorted.bam -c $sinloc2/*.sorted.bam -f BAM -n {$s}_macs2_out --gsize=2.7e9 -B --keep-dup=1 --pvalue=1e-5 --broad -B
+macs2 callpeak -t $sinloc1/*.sorted.bam -c $sinloc2/*.sorted.bam -f BAM -n {$s}_macs2_out --gsize=2.7e9 -B --keep-dup=1 --pvalue=1e-5 --broad
 #macs2 callpeak -t $sinloc1/*.sorted.bam -c $sinloc2/*.sorted.bam -f SAM -g hs -n macs2_sl_local -B -q 0.05 --slocal 5000 --llocal 50000
 echo "Finising MACS2 on the bam files..."
 echo "Peak calling for histone modifications done with both MACS1.4 and MACS2.."
