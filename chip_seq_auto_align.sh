@@ -12,8 +12,8 @@ echo "my facility directory= $2"
 s=$1
 sloc=$2
 soutloc=$3
-GENOME=/scratch/GT/softwares/IGVTools/genomes/hg19.chrom.sizes
-bigwig=/scratch/GT/softwares/HOMER/.//bin/makeUCSCfile 
+GENOME=/path_to/softwares/IGVTools/genomes/hg19.chrom.sizes
+bigwig=/path_to/softwares/HOMER/.//bin/makeUCSCfile 
 
 echo "performing assembly to create one fastq file ..."
 zcat $sloc/*.fastq.gz > $soutloc/$s.fastq
