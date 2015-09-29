@@ -10,8 +10,8 @@
 tag1=$1
 tag2=$2
 ### HOMER
-#cd /scratch/GT/vdas/serena_b/ChIPSeq/FASTQ_2015/
-peaks=/scratch/GT/softwares/HOMER/.//bin/findPeaks
+
+peaks=/path_to/softwares/HOMER/.//bin/findPeaks
 
 echo "Running the peak calling with HOMER..."
 $peaks $tag1 -style histone -o auto -i $tag2
@@ -20,7 +20,7 @@ cd $tag1
 ls -ltr
 echo "Moved to the tag directory where peak out is generated..."
 echo "Converting text to bed format..."
-perl2bed=/scratch/GT/softwares/HOMER/.//bin/pos2bed.pl; $perl2bed peaks.txt > peaks.bed
+perl2bed=/path_to/softwares/HOMER/.//bin/pos2bed.pl; $perl2bed peaks.txt > peaks.bed
 echo "Removing the headers from the bed file..."
 more peaks.bed | grep -v "#" > peaks_clean.bed
 echo "HOMER peaks generated and corresponding bed file is created..."
