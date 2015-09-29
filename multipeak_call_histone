@@ -10,15 +10,15 @@ sinloc1=$2
 sinloc2=$3
 soutloc=$4
 #sbedout=$4
-GENOME=/scratch/GT/softwares/IGVTools/genomes/mm9.chrom.sizes
-peaks=/scratch/GT/softwares/HOMER/.//bin/findPeaks 
-#cd /scratch/GT/vdas/serena_b/ChIPSeq/FASTQ_2015/
-sicerloc=/scratch/GT/softwares/SICER_V1.1/SICER/
-sicerbed=/scratch/GT/vdas/serena_b/ChIPSeq/FASTQ_2015/bed_files
-#folder=/scratch/GT/vdas/serena_b/
-rsegpeak=/scratch/GT/softwares/rseg-0.4.8/bin/rseg-diff
-rsegmm9bed=/scratch/GT/softwares/rseg-0.4.8/data/mm9/mouse-mm9-size.bed
-rsegdeadzones=/scratch/GT/softwares/rseg-0.4.8/data/deadzones/deadzones-mm9-k51.bed
+GENOME=/path_to/softwares/IGVTools/genomes/mm9.chrom.sizes
+peaks=/path_to/softwares/HOMER/.//bin/findPeaks 
+
+sicerloc=/path_to/softwares/SICER_V1.1/SICER/
+sicerbed=/path_to/vdas/client/ChIPSeq/FASTQ_2015/bed_files
+
+rsegpeak=/path_to/softwares/rseg-0.4.8/bin/rseg-diff
+rsegmm9bed=/path_to/softwares/rseg-0.4.8/data/mm9/mouse-mm9-size.bed
+rsegdeadzones=/path_to/softwares/rseg-0.4.8/data/deadzones/deadzones-mm9-k51.bed
 
 #resegout=/scratch/GT/vdas/serena_b/ChIPSeq/FASTQ_2015/
 
@@ -34,7 +34,7 @@ echo "Finising MACS2 on the bam files..."
 #$peaks ${s}_tag/ -o auto -bigWig $GENOME
 
 # !!!!Replace it with your own directory!!!
-#SICER=/scratch/GT/softwares/SICER_V1.1/SICER
+#SICER=/path_to/softwares/SICER_V1.1/SICER
 mkdir $soutloc/sicerout
 echo "Sicer out filers will be stored in= $soutloc/sicerout"
 echo "Running SICER for peak calling..."
