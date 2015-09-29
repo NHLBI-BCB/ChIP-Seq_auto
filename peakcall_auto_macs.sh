@@ -11,18 +11,7 @@ s=$1
 sinloc1=$2
 sinloc2=$3
 soutloc=$4
-#sbedout=$4
-#GENOME=/scratch/GT/softwares/IGVTools/genomes/hg19.chrom.sizes
-#peaks=/scratch/GT/softwares/HOMER/.//bin/findPeaks 
-#cd /scratch/GT/vdas/serena_b/ChIPSeq/FASTQ_2015/
-#sicerloc=/scratch/GT/softwares/SICER_V1.1/SICER/
-#sicerbed=/scratch/GT/vdas/serena_b/ChIPSeq/FASTQ_2015/bed_files
-#folder=/scratch/GT/vdas/serena_b/
-#rsegpeak=/scratch/GT/softwares/rseg-0.4.8/bin/rseg-diff
-#rsegmm9bed=/scratch/GT/softwares/rseg-0.4.8/data/mm9/mouse-mm9-size.bed
-#rsegdeadzones=/scratch/GT/softwares/rseg-0.4.8/data/deadzones/deadzones-mm9-k51.bed
 
-#resegout=/scratch/GT/vdas/serena_b/ChIPSeq/FASTQ_2015/
 
 echo "Running MACS 1.4 on the bam files with control for peak calling..."
 ### if chip is of protein/tf turn --nomodel True is chip is of histone turn of --nomodel
