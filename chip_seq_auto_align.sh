@@ -15,6 +15,8 @@ soutloc=$3
 GENOME=/path_to/softwares/IGVTools/genomes/hg19.chrom.sizes
 bigwig=/path_to/softwares/HOMER/.//bin/makeUCSCfile 
 
+mkdir $soutloc
+
 echo "performing assembly to create one fastq file ..."
 zcat $sloc/*.fastq.gz > $soutloc/$s.fastq
 
